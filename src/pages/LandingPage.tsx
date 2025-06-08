@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { 
   Check, 
   Plus, 
@@ -42,9 +43,9 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+      <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
@@ -57,11 +58,14 @@ const LandingPage = () => {
                 ChainReact
               </span>
             </div>
-            <Link to="/app">
-              <Button variant="outline" className="hidden sm:inline-flex">
-                Open App
-              </Button>
-            </Link>
+            <div className="flex items-center space-x-3">
+              <Link to="/app">
+                <Button variant="outline" className="hidden sm:inline-flex">
+                  Get Started
+                </Button>
+              </Link>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </nav>
@@ -78,10 +82,10 @@ const LandingPage = () => {
                 ChainReact
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-slate-600 mb-4 font-medium">
+            <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">
               Build momentum. One habit at a time.
             </p>
-            <p className="text-lg text-slate-500 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
               Track your habits, build powerful chains, and watch your progress grow. 
               A privacy-first habit tracker that works offline and respects your data.
             </p>
@@ -99,7 +103,7 @@ const LandingPage = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={handleInstallClick}
-                className="w-full sm:w-auto border-blue-200 hover:bg-blue-50 font-semibold px-8 py-4 text-lg"
+                className="w-full sm:w-auto border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-950 font-semibold px-8 py-4 text-lg"
               >
                 <Plus className="mr-2 h-5 w-5" />
                 Install App
@@ -109,7 +113,7 @@ const LandingPage = () => {
 
           {/* Screenshots */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <Card className="overflow-hidden shadow-xl border-0 bg-white/60 backdrop-blur-sm">
+            <Card className="overflow-hidden shadow-xl border-0 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm">
               <CardContent className="p-0">
                 <img 
                   src="https://onkarpatil4394.github.io/Chainreact-Assets/Screenshot%202025-06-01%20151646.png" 
@@ -118,7 +122,7 @@ const LandingPage = () => {
                 />
               </CardContent>
             </Card>
-            <Card className="overflow-hidden shadow-xl border-0 bg-white/60 backdrop-blur-sm">
+            <Card className="overflow-hidden shadow-xl border-0 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm">
               <CardContent className="p-0">
                 <img 
                   src="https://onkarpatil4394.github.io/Chainreact-Assets/Screenshot%202025-06-01%20151657.png" 
@@ -127,7 +131,7 @@ const LandingPage = () => {
                 />
               </CardContent>
             </Card>
-            <Card className="overflow-hidden shadow-xl border-0 bg-white/60 backdrop-blur-sm">
+            <Card className="overflow-hidden shadow-xl border-0 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm">
               <CardContent className="p-0">
                 <img 
                   src="https://onkarpatil4394.github.io/Chainreact-Assets/Screenshot%202025-06-01%20151727.png" 
@@ -141,13 +145,13 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-200 dark:to-slate-400 bg-clip-text text-transparent">
               Powerful Features
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Everything you need to build lasting habits, with none of the complexity.
             </p>
           </div>
@@ -231,7 +235,7 @@ const LandingPage = () => {
       {/* Trust Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-200 dark:to-slate-400 bg-clip-text text-transparent">
             Built with Trust in Mind
           </h2>
           
@@ -271,7 +275,7 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-6 md:mb-0">
@@ -291,7 +295,7 @@ const LandingPage = () => {
                 Terms of Service
               </Link>
               <Link to="/app" className="text-slate-300 hover:text-white transition-colors">
-                Open App
+                Get Started
               </Link>
             </div>
           </div>
