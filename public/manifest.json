@@ -1,0 +1,40 @@
+
+{
+  "name": "ChainReact - Habit Tracker",
+  "short_name": "ChainReact",
+  "description": "Build momentum. One habit at a time. Free, privacy-first habit tracking.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://onkarpatil4394.github.io/Chainreact-Assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://onkarpatil4394.github.io/Chainreact-Assets/android-chrome-192x192.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "lifestyle", "health"],
+  "screenshots": [
+    {
+      "src": "https://onkarpatil4394.github.io/Chainreact-Assets/Screenshot%202025-06-01%20151646.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://onkarpatil4394.github.io/Chainreact-Assets/Screenshot%202025-06-01%20151727.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
