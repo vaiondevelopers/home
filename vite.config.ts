@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/Chainreact-Landing-Page/', // 👈 IMPORTANT: use your repo name exactly here
   server: {
     host: "::",
     port: 8080,
